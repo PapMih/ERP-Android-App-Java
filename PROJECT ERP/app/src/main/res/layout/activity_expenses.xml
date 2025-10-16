@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/expenses"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6E357C"
+    android:textAlignment="textEnd">
+
+    <Button
+        android:id="@+id/button_purchase"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#D4BEE0"
+        android:drawableEnd="@drawable/buy_50"
+        android:fontFamily="@font/adlam_display"
+        android:onClick="startPurchasesActivity"
+        android:text="Αγορά"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#031203"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_other_expenses"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#D4BEE0"
+        android:drawableEnd="@drawable/icons8_debt_50"
+        android:fontFamily="@font/adlam_display"
+        android:onClick="startOutcomesActivity"
+        android:text="Λοιπά έξοδα"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#031203"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_purchase" />
+
+    <Button
+        android:id="@+id/button_expenses_category"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#D4BEE0"
+        android:drawableEnd="@drawable/category_50"
+        android:fontFamily="@font/adlam_display"
+        android:onClick="startAddExpensesCategoryActivity"
+        android:text="Προσθήκη κατ. εξόδου"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#031203"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_other_expenses" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

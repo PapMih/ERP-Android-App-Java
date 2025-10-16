@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_expenses_category"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6E357C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="60dp"
+        android:paddingTop="80dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_expenses_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Προσθήκη κατηγορίας εξόδου"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_expenses_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Σημείο πώλησης"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/button_expenses_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:text="Προσθήκη κατηγορίας" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

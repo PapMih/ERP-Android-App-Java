@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.PROJECTERP"
+        tools:targetApi="31">
+        <activity
+            android:name="projecterp.Activities.IncomeOutcomeRangeActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ReportsActivity" />
+        <activity
+            android:name="projecterp.Activities.IncomeOutcomePerMonthActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ReportsActivity" />
+        <activity
+            android:name="projecterp.Activities.OutcomesRangeActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ReportsActivity" />
+        <activity
+            android:name="projecterp.Activities.OutcomePerMonthActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ReportsActivity" />
+        <activity
+            android:name="projecterp.Activities.IncomeRangeActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ReportsActivity" />
+        <activity
+            android:name="projecterp.Activities.IncomePerMonthActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ReportsActivity" />
+        <activity
+            android:name="projecterp.Activities.SalesActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.MainActivity" />
+        <activity
+            android:name="projecterp.Activities.OutcomesActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ExpensesActivity" />
+        <activity
+            android:name="projecterp.Activities.PurchasesActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ExpensesActivity" />
+        <activity
+            android:name="projecterp.Activities.AddPrintedActivity"
+            android:parentActivityName="projecterp.Activities.WarehouseActivity" />
+        <activity
+            android:name="projecterp.Activities.AddExpensesCategoryActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.ExpensesActivity" />
+        <activity
+            android:name="projecterp.Activities.AddCharacteristicsActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.WarehouseActivity" />
+        <activity
+            android:name="projecterp.Activities.ReportsActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.MainActivity" />
+        <activity
+            android:name="projecterp.Activities.ExpensesActivity"
+            android:exported="false"
+            android:parentActivityName="projecterp.Activities.MainActivity" />
+        <activity
+            android:name="projecterp.Activities.MainActivity"
+            android:exported="true"
+            android:label="Αρχική οθόνη">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="projecterp.Activities.WarehouseActivity"
+            android:exported="true"
+            android:parentActivityName="projecterp.Activities.MainActivity" />
+        <activity
+            android:name="projecterp.Activities.NotPrintedActivity"
+            android:exported="true"
+            android:parentActivityName="projecterp.Activities.WarehouseActivity" />
+        <activity
+            android:name="projecterp.Activities.PrintedActivity"
+            android:exported="true"
+            android:parentActivityName="projecterp.Activities.WarehouseActivity" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

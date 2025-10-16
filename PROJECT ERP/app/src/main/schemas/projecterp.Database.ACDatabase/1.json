@@ -1,0 +1,365 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "bc2108b0629cab980ca51a8e4ed722fa",
+    "entities": [
+      {
+        "tableName": "colours",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`colours` TEXT NOT NULL, PRIMARY KEY(`colours`))",
+        "fields": [
+          {
+            "fieldPath": "colours",
+            "columnName": "colours",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "colours"
+          ]
+        }
+      },
+      {
+        "tableName": "designs",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`design` TEXT NOT NULL, PRIMARY KEY(`design`))",
+        "fields": [
+          {
+            "fieldPath": "design",
+            "columnName": "design",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "design"
+          ]
+        }
+      },
+      {
+        "tableName": "outcomes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`totalCostInt` INTEGER NOT NULL, `date` TEXT NOT NULL, `typeOfOutcome` TEXT NOT NULL, PRIMARY KEY(`date`, `typeOfOutcome`))",
+        "fields": [
+          {
+            "fieldPath": "totalCostInt",
+            "columnName": "totalCostInt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "typeOfOutcome",
+            "columnName": "typeOfOutcome",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "date",
+            "typeOfOutcome"
+          ]
+        }
+      },
+      {
+        "tableName": "products",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`amount` INTEGER NOT NULL, `categoryName` TEXT NOT NULL, `size` TEXT NOT NULL, `design` TEXT NOT NULL, `colours` TEXT NOT NULL, `storeLocation` TEXT NOT NULL, PRIMARY KEY(`colours`, `size`, `categoryName`, `design`, `storeLocation`))",
+        "fields": [
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryName",
+            "columnName": "categoryName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "design",
+            "columnName": "design",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colours",
+            "columnName": "colours",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "storeLocation",
+            "columnName": "storeLocation",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "colours",
+            "size",
+            "categoryName",
+            "design",
+            "storeLocation"
+          ]
+        }
+      },
+      {
+        "tableName": "product_categories",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`categoryName` TEXT NOT NULL, PRIMARY KEY(`categoryName`))",
+        "fields": [
+          {
+            "fieldPath": "categoryName",
+            "columnName": "categoryName",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "categoryName"
+          ]
+        }
+      },
+      {
+        "tableName": "purchases",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `categoryName` TEXT NOT NULL, `size` TEXT NOT NULL, `colour` TEXT NOT NULL, `amount` INTEGER NOT NULL, `totalCostInt` INTEGER NOT NULL, PRIMARY KEY(`date`, `size`, `categoryName`, `colour`))",
+        "fields": [
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryName",
+            "columnName": "categoryName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colour",
+            "columnName": "colour",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalCostInt",
+            "columnName": "totalCostInt",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "date",
+            "size",
+            "categoryName",
+            "colour"
+          ]
+        }
+      },
+      {
+        "tableName": "sales",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `date` TEXT NOT NULL, `categoryName` TEXT NOT NULL, `size` TEXT NOT NULL, `colours` TEXT NOT NULL, `amount` INTEGER NOT NULL, `totalIncome` REAL NOT NULL, `storeLocation` TEXT NOT NULL, `comment` TEXT NOT NULL, `design` TEXT NOT NULL)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryName",
+            "columnName": "categoryName",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colours",
+            "columnName": "colours",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "totalIncome",
+            "columnName": "totalIncome",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "storeLocation",
+            "columnName": "storeLocation",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "comment",
+            "columnName": "comment",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "design",
+            "columnName": "design",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        }
+      },
+      {
+        "tableName": "size",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`size` TEXT NOT NULL, PRIMARY KEY(`size`))",
+        "fields": [
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "size"
+          ]
+        }
+      },
+      {
+        "tableName": "store_locations",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`storeLocation` TEXT NOT NULL, PRIMARY KEY(`storeLocation`))",
+        "fields": [
+          {
+            "fieldPath": "storeLocation",
+            "columnName": "storeLocation",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "storeLocation"
+          ]
+        }
+      },
+      {
+        "tableName": "type_of_outcome",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`typeOfOutcome` TEXT NOT NULL, PRIMARY KEY(`typeOfOutcome`))",
+        "fields": [
+          {
+            "fieldPath": "typeOfOutcome",
+            "columnName": "typeOfOutcome",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "typeOfOutcome"
+          ]
+        }
+      },
+      {
+        "tableName": "warehouse",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`amount` INTEGER NOT NULL, `colours` TEXT NOT NULL, `size` TEXT NOT NULL, `categoryName` TEXT NOT NULL, PRIMARY KEY(`colours`, `size`, `categoryName`))",
+        "fields": [
+          {
+            "fieldPath": "amount",
+            "columnName": "amount",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "colours",
+            "columnName": "colours",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "size",
+            "columnName": "size",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "categoryName",
+            "columnName": "categoryName",
+            "affinity": "TEXT",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": false,
+          "columnNames": [
+            "colours",
+            "size",
+            "categoryName"
+          ]
+        }
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'bc2108b0629cab980ca51a8e4ed722fa')"
+    ]
+  }
+}

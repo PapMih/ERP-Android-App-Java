@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/reports"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6E357C"
+    android:textAlignment="textEnd">
+
+    <Button
+        android:id="@+id/button_income"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#D4BEE0"
+        android:drawableEnd="@drawable/increase_50"
+        android:fontFamily="@font/adlam_display"
+        android:onClick="startIncome"
+        android:text="Έσοδα"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#031203"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_outcome"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#D4BEE0"
+        android:drawableEnd="@drawable/decrease_50"
+        android:fontFamily="@font/adlam_display"
+        android:onClick="startOutcome"
+        android:text="Έξοδα"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#031203"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_income" />
+
+    <Button
+        android:id="@+id/button_balace"
+        android:layout_width="250dp"
+        android:layout_height="71dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="100dp"
+        android:backgroundTint="#D4BEE0"
+        android:drawableEnd="@drawable/balance_50"
+        android:fontFamily="@font/adlam_display"
+        android:onClick="startBalance"
+        android:text="Έσοδα - Έξοδα"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#031203"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_outcome" />
+
+    <LinearLayout
+        android:id="@+id/layout_period"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        app:layout_constraintTop_toBottomOf="@id/button_balace"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:id="@+id/tv_by_month"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ανά μήνα"
+            android:textColor="@android:color/white"
+            android:paddingEnd="8dp"/>
+
+        <Switch
+            android:id="@+id/switch_period"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:showText="false"/>
+
+        <TextView
+            android:id="@+id/tv_by_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Εύρος ημερομηνιών"
+            android:textColor="@android:color/white"
+            android:paddingStart="8dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_characteristics"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#6E357C">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="60dp"
+        android:paddingEnd="60dp"
+        android:paddingBottom="60dp"
+        android:paddingTop="40dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingVertical="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Προσθήκη μεγέθους"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_size"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Μέγεθος"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/button_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:text="Προσθήκη μεγέθους" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_colour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Προσθήκη χρώματος"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_colour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Χρώμα"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/button_colour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:text="Προσθήκη χρώματος" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Προσθήκη σχεδίου"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_design"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Σχέδιο"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/button_design"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:text="Προσθήκη σχεδίου" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Προσθήκη κατηγορίας"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_category"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Κατηγορία προϊόντος"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/button_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:text="Προσθήκη κατηγορίας" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Προσθήκη σημείου πώλησης"
+                android:textColor="@android:color/white"
+                android:textSize="16sp" />
+
+            <EditText
+                android:id="@+id/editText_pos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@android:drawable/edit_text"
+                android:hint="Σημείο πώλησης"
+                android:inputType="text"
+                android:textColor="@android:color/white"
+                android:textColorHint="#B3FFFFFF" />
+
+            <Button
+                android:id="@+id/button_pos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onButtonClick"
+                android:text="Προσθήκη σημείου" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
